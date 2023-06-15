@@ -1,3 +1,4 @@
-export function createPW(passphrase) {
+function createPW(passphrase) {
   return passphrase
 }
+export {createPW};
