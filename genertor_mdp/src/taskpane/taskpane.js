@@ -14,6 +14,7 @@ Office.onReady((info) => {
 });
 
 export async function run() {
+  console.log(test);
   import createPW from "./pw.js";
   document.getElementById("button").onclick = function() {getPassword()};
   function getPassword() {
