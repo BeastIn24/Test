@@ -24,7 +24,7 @@ export async function run() {
         let str = words
         let passphrase = str[0]["name"] + " " + str[1]["name"] + " " + str[2]["name"]
         let password = createPW(passphrase)
-        console.log(password)
+        document.getElementById("password").value = password
       })
   }
 }
