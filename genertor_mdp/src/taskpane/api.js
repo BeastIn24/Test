@@ -1,4 +1,4 @@
-import createPW from "./pw.js";
+import {createPW} from "./pw.js";
 document.getElementById("button").onclick = function() {getPassword()};
 function getPassword() {
   fetch("https://trouve-mot.fr/api/random/3")
