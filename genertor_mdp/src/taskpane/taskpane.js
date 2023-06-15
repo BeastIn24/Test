@@ -18,7 +18,7 @@ export async function run() {
   import createPW from "./pw.js";
   document.getElementById("button").onclick = function() {getPassword()};
   function getPassword() {
-    fetch("https://trouve-mot.fr/api/random/3")
+    fetch("https://trouve-mot.fr/api/size/3/3")
       .then((response) => response.json())
       .then((words) => {
         let str = words
