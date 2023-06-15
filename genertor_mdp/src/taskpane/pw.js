@@ -18,7 +18,7 @@ function createPW(passphrase) {
       password = password + '0';
     }
     if (passphrase[i] == ' ') {
-      password = password + specialList[Math.floor(Math.random() * list.length)];
+      password = password + specialList[Math.floor(Math.random() * specialList.length)];
       password = password + passphrase[i+1].toUpperCase();
       i++;
     }
