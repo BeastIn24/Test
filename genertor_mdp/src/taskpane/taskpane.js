@@ -18,7 +18,7 @@ function copy() {
   navigator.clipboard.writeText(pw.value);
   pw.blur();
   document.getElementById("copyimg").setAttribute("src","https://beastin24.github.io/Test/genertor_mdp/assets/checkimg.png");  
-  setTimeout(function(){
-    document.getElementById("copyimg").attr("src","https://beastin24.github.io/Test/genertor_mdp/assets/copyimg.png");
+  setTimeout(function(){ 
+    document.getElementById("copyimg").setAttribute("src","https://beastin24.github.io/Test/genertor_mdp/assets/copyimg.png"); 
   }, 1000);
 }
