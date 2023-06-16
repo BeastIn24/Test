@@ -5,19 +5,19 @@ function createPW(passphrase) {
     if (passphrase[i] == 'a') {
       password = password + '4';
     }
-    if (passphrase[i] == 'e') {
+    else if (passphrase[i] == 'e') {
       password = password + '3';
     }
-    if (passphrase[i] == 's') {
+    else if (passphrase[i] == 's') {
       password = password + '5';
     }
-    if (passphrase[i] == 'l') {
+    else if (passphrase[i] == 'l') {
       password = password + '1';
     }
-    if (passphrase[i] == 'o') {
+    else if (passphrase[i] == 'o') {
       password = password + '0';
     }
-    if (passphrase[i] == ' ') {
+    else if (passphrase[i] == ' ') {
       password = password + specialList[Math.floor(Math.random() * specialList.length)];
       password = password + passphrase[i+1].toUpperCase();
       i++;
