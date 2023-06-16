@@ -17,7 +17,7 @@ function copy() {
   pw.select();
   navigator.clipboard.writeText(pw.value);
   pw.blur();
-  var originalImage = document.getElementById("copyimg").attr("src");
+  var originalImage = document.getElementById("copyimg").getAttribute("src");
   var changeImage = document.getElementById("copyimg").data("changeimage");
   document.getElementById("copyimg").attr("src",changeImage);  
   setTimeout(function(){

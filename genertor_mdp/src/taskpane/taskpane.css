@@ -10,11 +10,6 @@
      margin: 0;
      padding: 0;
  }
- 
-img {
-    width: 20px;
-    height: 20px;
-}
 
 .ms-welcome__header {
     padding: 20px;
@@ -28,7 +23,7 @@ img {
  }
 
 .ms-font-su {
-    font-size: 14px;
+    font-size: 24px;
  }
 
  .copybtn {
