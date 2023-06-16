@@ -1,17 +1,19 @@
-/*
- * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
- * See LICENSE in the project root for license information.
- */
+import {createPW} from "./pw.js";
+document.getElementById("genPwButton").onclick = function() {getPassword()};
+function getPassword() {
+  fetch("https://trouve-mot.fr/api/sizemin/4/3")
+    .then((response) => response.json())
+    .then((words) => {
+      let str = words
+      let passphrase = str[0]["name"] + " " + str[1]["name"] + " " + str[2]["name"]
+      let password = createPW(passphrase)
+      document.getElementById("password").value = password
+    })
+}
 
-/* global document, Office */
-
-Office.onReady((info) => {
-  if (info.host === Office.HostType.Outlook) {
-    document.getElementById("sideload-msg").style.display = "none";
-    document.getElementById("app-body").style.display = "flex";
-    document.getElementById("run").onclick = run;
-  }
-});
-
-export async function run() {
+document.getElementById("copyButton").onclick = function() {copy()};
+function copy() {
+  var pw = document.getElementById("password");
+  pw.select();
+  navigator.clipboard.writeText(pw.value);
 }
