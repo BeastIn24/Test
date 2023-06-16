@@ -14,6 +14,5 @@ function getPassword() {
 document.getElementById("copyButton").onclick = function() {copy()};
 function copy() {
   var pw = document.getElementById("password");
-  pw.select();
   navigator.clipboard.writeText(pw.value);
 }
