@@ -22,6 +22,9 @@ function createPW(passphrase) {
       password = password + passphrase[i+1].toUpperCase();
       i++;
     }
+    else {
+      password = password + passphrase[i];
+    }
   }
   return password;
 }
