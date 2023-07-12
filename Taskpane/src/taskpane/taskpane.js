@@ -17,8 +17,8 @@ function copy() {
   pw.select();
   navigator.clipboard.writeText(pw.value);
   pw.blur();
-  document.getElementById("copyimg").setAttribute("src","https://beastin24.github.io/Test/genertor_mdp/assets/checkimg.png");  
+  document.getElementById("copyimg").setAttribute("src","https://beastin24.github.io/Test/Taskpane/assets/checkimg.png");  
   setTimeout(function(){ 
-    document.getElementById("copyimg").setAttribute("src","https://beastin24.github.io/Test/genertor_mdp/assets/copyimg.png"); 
+    document.getElementById("copyimg").setAttribute("src","https://beastin24.github.io/Test/Taskpane/assets/copyimg.png"); 
   }, 1000);
 }
