@@ -16,9 +16,9 @@ function getPassword() {
 
 document.getElementById("genPwButton2").onclick = function() {getPasswordfromUser()};
 function getPasswordfromUser() {
-  var word1 = document.getElementById("word1");
-  var word2 = document.getElementById("word2");
-  var word3 = document.getElementById("word3");
+  var word1 = document.getElementById("word1").value;
+  var word2 = document.getElementById("word2").value;
+  var word3 = document.getElementById("word3").value;
   let passphrase = word1 + " " + word2 + " " + word3;
   let password = createPW(passphrase);
   document.getElementById("password2").value = password;
