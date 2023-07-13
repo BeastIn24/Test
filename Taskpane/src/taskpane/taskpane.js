@@ -19,9 +19,9 @@ function getPasswordfromUser() {
   var word1 = document.getElementById("word1");
   var word2 = document.getElementById("word2");
   var word3 = document.getElementById("word3");
-  passphrase = word1 + " " + word2 + " " + word3;
+  let passphrase = word1 + " " + word2 + " " + word3;
   let password = createPW(passphrase);
-  document.getElementById("password2").value = word1;
+  document.getElementById("password2").value = password;
 
 }
 document.getElementById("copyButton").onclick = function() {copy(1)};
