@@ -1,7 +1,7 @@
 import {createPW} from "./pw.js";
 document.getElementById("genPwButton").onclick = function() {getPassword()};
 function getPassword() {
-  fetch("https://trouve-mot.fr/api/sizemax/6/2")
+  fetch("https://trouve-mot.fr/api/sizemax/6/3")
     .then((response) => response.json())
     .then((words) => {
       let str = words;
