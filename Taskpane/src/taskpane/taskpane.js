@@ -31,12 +31,12 @@ document.getElementById("copyButton").onclick = function() {copy(1)};
 document.getElementById("copyButton2").onclick = function() {copy(2)};
 function copy(n) {
   if (n == 1) {
-    pwAttr = "password";
-    copyAttr = "copyimg";
+    let pwAttr = "password";
+    let copyAttr = "copyimg";
   }
   else {
-    pwAttr = "password2";
-    copyAttr = "copyimg2";
+    let pwAttr = "password2";
+    let copyAttr = "copyimg2";
   }
   var pw = document.getElementById(pwAttr);
   pw.select();
