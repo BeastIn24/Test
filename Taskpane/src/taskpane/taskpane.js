@@ -6,8 +6,10 @@ function getPassword(n) {
   if (n <= 13) {
     var a = Math.floor(Math.random() * (n-4))+2;
     var b = n-a-1;
+    console.log("a = " + a + ", b = " + b);
     var request1 = request + a;
     var request2 = request + b;
+    console.log("requete1 = " + request1 + " , requete2 = " + request2);
     passphrase = passphrase  + getWord(request1) + getWord(request2);
   }
   else {
@@ -24,10 +26,12 @@ function getPassword(n) {
 }
 
 function getWord(request) {
+  console.log("requete = " + request);
   fetch(request.toString())
     .then((response) => response.json())
     .then((words) => {
       let str = words;
+      console.log("mot = " + str[0]["name"]);
       return(str[0]["name"]);
     })
 }
