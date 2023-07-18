@@ -8,8 +8,13 @@ function getPassword(n) {
     var b = n-a-1;
     var request1 = request + a;
     var request2 = request + b;
-    var word = getWord(request1);
-    passphrase = passphrase  + word + " " + getWord(request2);
+    fetch(request1.toString())
+    .then((response) => response.json())
+    .then((words) => {
+      let str = words;
+      var word = str[0]["name"];
+      passphrase = passphrase  + word;
+    })
   }
   else {
     var a = Math.floor(Math.random() * (n-7))+2;
@@ -21,7 +26,7 @@ function getPassword(n) {
     passphrase = passphrase  + getWord(request1) + " " + getWord(request2) + " " + getWord(request3);
   }
   let password = createPW(passphrase);
-  document.getElementById("password").value = word;
+  document.getElementById("password").value = passphrase;
 }
 
 function getWord(request) {
