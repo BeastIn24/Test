@@ -21,7 +21,7 @@ function getPassword(n) {
     passphrase = passphrase  + getWord(request1) + " " + getWord(request2) + " " + getWord(request3);
   }
   let password = createPW(passphrase);
-  document.getElementById("password").value = request1;
+  document.getElementById("password").value = word;
 }
 
 function getWord(request) {
@@ -63,8 +63,8 @@ function copy(n) {
   pw.select();
   navigator.clipboard.writeText(pw.value);
   pw.blur();
-  document.getElementById(copyAttr).setAttribute("src","https://beastin24.github.io/Test/Taskpane/assets/checkimg.png");  
+  document.getElementById(copyAttr).setAttribute("src","../../assets/checkimg.png");  
   setTimeout(function(){ 
-    document.getElementById(copyAttr).setAttribute("src","https://beastin24.github.io/Test/Taskpane/assets/copyimg.png"); 
+    document.getElementById(copyAttr).setAttribute("src","../../assets/copyimg.png"); 
   }, 1000);
 }

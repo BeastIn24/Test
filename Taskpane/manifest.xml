@@ -6,7 +6,7 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Générateur de mot de passe"/>
   <Description DefaultValue="Taskpane contenant un bouton pour générer un mot de passe aléatoire à partir d'une passsphrase"/>
-  <IconUrl DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/lock.png"/>
+  <IconUrl DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg.png"/>
   <HighResolutionIconUrl DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
