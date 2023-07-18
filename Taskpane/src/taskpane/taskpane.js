@@ -9,7 +9,7 @@ function getPassword(n) {
     var request1 = request + a;
     var request2 = request + b;
     var word = getWord(request1);
-    passphrase = passphrase  + word.toString() + " " + getWord(request2).toString();
+    passphrase = passphrase  + word + " " + getWord(request2);
   }
   else {
     var a = Math.floor(Math.random() * (n-7))+2;
