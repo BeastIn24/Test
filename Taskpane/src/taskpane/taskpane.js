@@ -20,7 +20,7 @@ function getPassword(n) {
     passphrase = passphrase  + getWord(request1) + " " + getWord(request2) + " " + getWord(request3);
   }
   let password = createPW(passphrase);
-  document.getElementById("password").value = password;
+  document.getElementById("password").value = request1;
 }
 
 function getWord(request) {
