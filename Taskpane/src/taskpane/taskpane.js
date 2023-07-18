@@ -8,7 +8,8 @@ function getPassword(n) {
     var b = n-a-1;
     var request1 = request + a;
     var request2 = request + b;
-    passphrase = passphrase  + getWord(request1) + " " + getWord(request2);
+    var word = getWord(request1);
+    passphrase = passphrase  + word.toString() + " " + getWord(request2).toString();
   }
   else {
     var a = Math.floor(Math.random() * (n-7))+2;
@@ -28,7 +29,6 @@ function getWord(request) {
     .then((response) => response.json())
     .then((words) => {
       let str = words;
-      console.log("mot = " + str[0]["name"]);
       return(str[0]["name"]);
     })
 }
