@@ -1,16 +1,34 @@
 import {createPW} from "./pw.js";
-document.getElementById("genPwButton").onclick = function() {getPassword()};
-function getPassword() {
-  fetch("https://trouve-mot.fr/api/sizemax/6/3")
+document.getElementById("genPwButton").onclick = function() {getPassword(n)};
+function getPassword(n) {
+  var request = "https://trouve-mot.fr/api/size/";
+  let passphrase = "";
+  if (n <= 13) {
+    var a = Math.floor(Math.random() * (n-4))+2;
+    var b = n-a-1;
+    var request1 = request + a;
+    var request2 = request + b;
+    passphrase = passphrase  + getWord(request1) + getWord(request2);
+  }
+  else {
+    var a = Math.floor(Math.random() * (n-7))+2;
+    var b = Math.floor(Math.random() * (n-a-5))+2;
+    var c = n-a-b-2;
+    var request1 = request + a;
+    var request2 = request + b;
+    var request3 = request + c;
+    passphrase = passphrase  + getWord(request1) + getWord(request2) + getWord(request3);
+  }
+  let password = createPW(passphrase);
+  document.getElementById("password").value = password;
+}
+
+function getWord(request) {
+  fetch(request.toString())
     .then((response) => response.json())
     .then((words) => {
       let str = words;
-      let passphrase = str[0]["name"] + " " + str[1]["name"];
-      if (passphrase.length < 8) {
-        passphrase = passphrase + " " + str[2]["name"];
-      }
-      let password = createPW(passphrase);
-      document.getElementById("password").value = password;
+      return(str[0]["name"]);
     })
 }
 
