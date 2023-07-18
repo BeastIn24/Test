@@ -1,5 +1,5 @@
 import {createPW} from "./pw.js";
-document.getElementById("genPwButton").onclick = function() {getPassword(n)};
+document.getElementById("genPwButton").onclick = function() {getPassword(12)};
 function getPassword(n) {
   var request = "https://trouve-mot.fr/api/size/";
   let passphrase = "";
