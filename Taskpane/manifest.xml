@@ -6,8 +6,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Mot de passe"/>
   <Description DefaultValue="Taskpane contenant un bouton pour générer un mot de passe aléatoire à partir d'une passphrase"/>
-  <IconUrl DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg_80.jpg"/>
-  <HighResolutionIconUrl DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg_80.jpg"/>
+  <IconUrl DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg80.png"/>
+  <HighResolutionIconUrl DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg80.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
     <AppDomain>https://www.contoso.com</AppDomain>
@@ -87,9 +87,9 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg_16.jpg"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg_32.jpg"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg_80.jpg"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://beastin24.github.io/Test/Taskpane/assets/cleimg80.png"/>
       </bt:Images>
       <bt:Urls>
         <!--bt:Url id="Commands.Url" DefaultValue="https://beastin24.github.io/Test/Taskpane/src/commands/commands.html"/-->
