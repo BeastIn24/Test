@@ -3,37 +3,56 @@
  * See LICENSE in the project root for license information.
  */
  * {
-    margin: 0;
-    padding: 0;
-  }
+   margin: 0;
+   padding: 0;
+}
 
- html,
- body {
-    width: 100%;
-    height: 100%;
+html,
+body {
+   width: 100%;
+   height: 100%;
  }
+
+#gen {
+   text-align: center;
+   margin: 0 auto;
+}
+
+#info {
+   display: table;
+   margin: 0 auto;
+}
+
+.marge {
+   margin-left: 5em;
+}
+
+.title {
+   font-weight: bold;
+}
 
 .ms-welcome__header {
-    padding: 20px;
-    padding-bottom: 30px;
-    padding-top: 60px;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    align-items: center;
- }
+   padding: 20px;
+   padding-bottom: 30px;
+   padding-top: 60px;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   align-items: center;
+}
 
 .ms-font-su {
-    padding-top: 30px;
-    font-size: 22px;
- }
+   padding-top: 30px;
+   font-size: 22px;
+   font-weight: bold;
+}
 
- .genpwd{
-    padding-top: 40px;
- }
+.genpwd{
+   padding-top: 40px;
+}
 
- .copybtn {
+.copybtn {
   width: 22px;
   height: 22px;
- }
+}

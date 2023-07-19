@@ -22,24 +22,49 @@
         <img height="50" src="../../assets/pomonaimg.png" alt="Pomona" title="Pomona" />
         <h1 class="ms-font-su">Générateur de mot de passe</h1>
     </header>
-    <div class="genpwd" align="center">
-        À partir de mots aléatoires <br/><br/>
-        <button id="genPwButton"> Générer</button>
-        <input type=text id="password" size=30>
-        <button class="copybtn" id="copyButton">
-            <img id="copyimg" src="../../assets/copyimg.png" border="0" data-changeimage="../../assets/checkimg.png" width="10px" height="10px"/> 
-        </button>
+    <div id="gen">
+        <div class="genpwd" text-align="center">
+            <span class="title">À partir de mots aléatoires</span><br/><br/>
+            Nombre de caractères :
+            <select name="lengthselector" id="length">
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+            </select><br/>
+            <button id="genPwButton"> Générer</button>
+            <input type=text id="password" size=30>
+            <button class="copybtn" id="copyButton">
+                <img id="copyimg" src="../../assets/copyimg.png" border="0" data-changeimage="../../assets/checkimg.png" width="10px" height="10px"/> 
+            </button>
+        </div>
+        <div class="genpwd" text-align="center">
+            <span class="title">À partir de mots choisis</span><br/><br/>
+            <input type=text id="word1" size=15>
+            <input type=text id="word2" size=15>
+            <input type=text id="word3" size=15><br/><br/>
+            <button id="genPwButton2"> Générer</button>
+            <input type=text id="password2" size=30>
+            <button class="copybtn" id="copyButton2">
+                <img id="copyimg2" src="../../assets/copyimg.png" border="0" data-changeimage="../../assets/checkimg.png" width="10px" height="10px"/> 
+            </button>
+        </div><br/><br/>
     </div>
-    <div class="genpwd" align="center">
-        À partir de mots choisis <br/><br/>
-        <input type=text id="word1" size=20>
-        <input type=text id="word2" size=20>
-        <input type=text id="word3" size=20><br/><br/>
-        <button id="genPwButton2"> Générer</button>
-        <input type=text id="password2" size=30>
-        <button class="copybtn" id="copyButton2">
-            <img id="copyimg2" src="../../assets/copyimg.png" border="0" data-changeimage="../../assets/checkimg.png" width="10px" height="10px"/> 
-        </button>
+    <div id="info">
+        <p text-align="center" style="border: 1px solid black; padding: 10px;" >
+            Il est recommandé qu'un mot de passe respecte les critères suivants : <br/>
+            - être d'une longueur au moins égale à 8 caractères <br/>
+            - être composé d'au moins 3 des 4 critères de complexité suivants : <br/>
+            <span class="marge">- un ou des minuscules</span><br/>
+            <span class="marge">- un ou des majuscules</span><br/>
+            <span class="marge">- au moins un des caractères spéciaux visibles sur le clavier</span><br/>
+            <span class="marge">- un ou des chiffres</span><br/>
+        </p>
     </div>
     <script type="module" src="taskpane.js"></script>
 </body>
