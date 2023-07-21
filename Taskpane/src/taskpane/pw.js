@@ -4,15 +4,15 @@ function createPW(passphrase) {
   var password ="";
   for (let i = 0; i < passphrase.length; i++) {
   if (passphrase[i] == 'a' || passphrase[i] == 'à' || passphrase[i] == 'â') {
-      list = "aaaaa44A";
+      list = "aaaaa44A@";
       password = password + list[Math.floor(Math.random() * list.length)];
   }
   else if (passphrase[i] == 'e' || passphrase[i] == 'é' || passphrase[i] == 'è' || passphrase[i] == 'ê') {
-      list = "eeeee33E";
+      list = "eeeee33E&£";
       password = password + list[Math.floor(Math.random() * list.length)];
   }
   else if (passphrase[i] == 's') {
-      list = "sssss55S";
+      list = "sssss55S$";
       password = password + list[Math.floor(Math.random() * list.length)];
   }
   else if (passphrase[i] == 'l') {
@@ -30,9 +30,25 @@ function createPW(passphrase) {
       list = "uuuuuU";
       password = password + list[Math.floor(Math.random() * list.length)];
   }
-  else if (passphrase[i] == 'î' || passphrase[i] == 'ï') {
-      list = "iiiiiI";
+  else if (passphrase[i] == 'i' ||passphrase[i] == 'î' || passphrase[i] == 'ï') {
+      list = "iiiiiI!;";
       password = password + list[Math.floor(Math.random() * list.length)];
+  }
+  else if (passphrase[i] == 't') {
+    list = "ttttt77T";
+    password = password + list[Math.floor(Math.random() * list.length)];
+  }
+  else if (passphrase[i] == 'q') {
+    list = "qqqqq99Q";
+    password = password + list[Math.floor(Math.random() * list.length)];
+  }
+  else if (passphrase[i] == 'b') {
+    list = "bbbbb66B";
+    password = password + list[Math.floor(Math.random() * list.length)];
+  }
+  else if (passphrase[i] == 'z') {
+    list = "zzzz22Z";
+    password = password + list[Math.floor(Math.random() * list.length)];
   }
   else {
       let n = Math.floor(Math.random() * 8);
