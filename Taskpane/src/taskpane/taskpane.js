@@ -44,6 +44,7 @@ async function getPassword(n) {
         passphrase = passphrase  + word1 + " " + word2 + " " + word3 + " " + word4;
     }
     let password = createPW(passphrase);
+    document.getElementById("usedwords").value = passphrase;
     document.getElementById("password").value = password;
 }
 
