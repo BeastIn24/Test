@@ -48,13 +48,12 @@
     </div>
     <div id="info">
         <p text-align="center" style="border: 1px solid black; padding: 10px;" >
-            Il est recommandé qu'un mot de passe respecte les critères suivants : <br/>
-            - être d'une longueur au moins égale à 8 caractères <br/>
-            - être composé d'au moins 3 des 4 critères de complexité suivants : <br/>
-            <span class="tab">- un ou des minuscules</span><br/>
-            <span class="tab">- un ou des majuscules</span><br/>
-            <span class="tab">- un ou des caractères spéciaux</span><br/>
-            <span class="tab">- un ou des chiffres</span><br/>
+            <span>Le mot de passe contient :</span><br/>
+            <span>- au moins 8 caractères</span><input type="checkbox" id="checklength"></input><br/>
+            <span>- un ou des minuscules</span><input type="checkbox" id="checklower"></input><br/>
+            <span>- un ou des majuscules</span><input type="checkbox" id="checkupper"></input><br/>
+            <span>- un ou des caractères spéciaux</span><input type="checkbox" id="checkspecial"></input><br/>
+            <span>- un ou des chiffres</span><input type="checkbox" id="checknumber"></input><br/>
         </p>
     </div>
     <script type="module" src="taskpane.js"></script>
