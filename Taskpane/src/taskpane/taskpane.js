@@ -3,15 +3,9 @@ document.getElementById("genPwButton").onclick = function() {getPassword(documen
 async function getPassword(n) {
     let request = "https://trouve-mot.fr/api/size/";
     let passphrase = "";
-    let word1 = "";
-    let word2 = "";
-    let word3 = "";
-    let a;
-    let b;
-    let c;
-    let request1;
-    let request2;
-    let request3;
+    let word1,word2,word3,word4 = "";
+    let a,b,c,d;
+    let request1, request2, request3,request4;
     if (n <= 13) {
         a = Math.floor(Math.random() * (n-4))+2;
         b = n-a-1;
@@ -22,7 +16,7 @@ async function getPassword(n) {
         word2 = await getWord(request2);
         passphrase = passphrase + word1 + " " + word2;
     }
-    else {
+    else if (14 <= n <= 23) {
         a = Math.floor(Math.random() * (n-7))+2;
         b = Math.floor(Math.random() * (n-a-5))+2;
         c = n-a-b-2;
@@ -33,6 +27,21 @@ async function getPassword(n) {
         request3 = request + c;
         word3 = await getWord(request3);
         passphrase = passphrase  + word1 + " " + word2 + " " + word3;
+    }
+    else {
+        a = Math.floor(Math.random() * (n-10))+2;
+        b = Math.floor(Math.random() * (n-a-8))+2;
+        c = Math.floor(Math.random() * (n-a-b-6))+2;
+        d = n-a-b-c-3
+        request1 = request + a;
+        word1 = await getWord(request1);
+        request2 = request + b;
+        word2 = await getWord(request2);
+        request3 = request + c;
+        word3 = await getWord(request3);
+        request4 = request + d;
+        word4 = await getWord(request4);
+        passphrase = passphrase  + word1 + " " + word2 + " " + word3 + " " + word4;
     }
     let password = createPW(passphrase);
     document.getElementById("password").value = password;
