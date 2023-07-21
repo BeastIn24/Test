@@ -85,7 +85,7 @@ function updatepassword(i) {
 
 function checkpassword(password) {
     let len, lower, upper, special, number = false;
-    if (password.length() >= 8) {
+    if (password.length >= 8) {
         len = true;
     }
     for (i=0; i<length(password); i++) {
@@ -108,25 +108,25 @@ function checkpassword(password) {
     else {
         document.getElementById('checklen').style.color = "FF0000";
     }
-    if (len) {
+    if (lower) {
         document.getElementById('checklower').style.color = "#00FF00";
     }
     else {
         document.getElementById('checklower').style.color = "FF0000";
     }
-    if (len) {
+    if (upper) {
         document.getElementById('checkupper').style.color = "#00FF00";
     }
     else {
         document.getElementById('checkupper').style.color = "FF0000";
     }
-    if (len) {
+    if (special) {
         document.getElementById('checkspecial').style.color = "#00FF00";
     }
     else {
         document.getElementById('checkspecial').style.color = "FF0000";
     }
-    if (len) {
+    if (number) {
         document.getElementById('checknumber').style.color = "#00FF00";
     }
     else {
