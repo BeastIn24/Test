@@ -85,7 +85,7 @@ function updatepassword(i) {
 
 function checkpassword(password) {
     let len, lower, upper, special, number = false;
-    if (length(password) >= 8) {
+    if (password.length() >= 8) {
         len = true;
     }
     for (i=0; i<length(password); i++) {
