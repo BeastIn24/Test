@@ -103,34 +103,34 @@ function checkpassword(password) {
         }
     }
     if (len) {
-        document.getElementById('checklen').style.color = green;
+        document.getElementById('checklen').style.color = "#00FF00";
     }
     else {
-        document.getElementById('checklen').style.color = red;
+        document.getElementById('checklen').style.color = "FF0000";
     }
     if (len) {
-        document.getElementById('checklower').style.color = green;
+        document.getElementById('checklower').style.color = "#00FF00";
     }
     else {
-        document.getElementById('checklower').style.color = red;
+        document.getElementById('checklower').style.color = "FF0000";
     }
     if (len) {
-        document.getElementById('checkupper').style.color = green;
+        document.getElementById('checkupper').style.color = "#00FF00";
     }
     else {
-        document.getElementById('checkupper').style.color = red;
+        document.getElementById('checkupper').style.color = "FF0000";
     }
     if (len) {
-        document.getElementById('checkspecial').style.color = green;
+        document.getElementById('checkspecial').style.color = "#00FF00";
     }
     else {
-        document.getElementById('checkspecial').style.color = red;
+        document.getElementById('checkspecial').style.color = "FF0000";
     }
     if (len) {
-        document.getElementById('checknumber').style.color = green;
+        document.getElementById('checknumber').style.color = "#00FF00";
     }
     else {
-        document.getElementById('checknumber').style.color = red;
+        document.getElementById('checknumber').style.color = "FF0000";
     }
 }
 
