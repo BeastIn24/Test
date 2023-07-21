@@ -1,5 +1,4 @@
 import {createPW} from "./pw.js";
-$("input:checkbox").click(function() { return false; });
 document.getElementById("genPwButton").onclick = function() {getPassword(document.getElementById("length").value)};
 async function getPassword(n) {
     let request = "https://trouve-mot.fr/api/size/";
