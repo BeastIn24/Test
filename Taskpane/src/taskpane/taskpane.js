@@ -88,7 +88,7 @@ function checkpassword(password) {
     if (password.length >= 8) {
         len = true;
     }
-    for (i=0; i<password.length; i++) {
+    for (let i=0; i < password.length; i++) {
         if (97 <= password.charCodeAt(i) <= 122) {
             lower = true;
         }
