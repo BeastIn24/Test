@@ -2,7 +2,7 @@
  * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
  * See LICENSE in the project root for license information.
  */
-* {
+ * {
    margin: 0;
    padding: 0;
 }
@@ -55,4 +55,8 @@ body {
 .copybtn {
   width: 22px;
   height: 22px;
+}
+
+.error {
+   color: #f00;
 }

@@ -24,8 +24,9 @@
     <div id="gen">
         <div class="genpwd" text-align="center">
             <span class="title">À partir de mots aléatoires</span><br/><br/>
-            Nombre de caractères (max 32) : <br/>
-            <input type="text" name="lengthselector" id="length" value=8></input><br/><br/>
+            Nombre de caractères (entre 8 et 32) : <br/>
+            <input type="text" name="lengthselector" id="length" value=8></input><br/>
+            <span class="error" id="errorname"></span><br/>
             <button id="genPwButton"> Générer</button>
             <input type=text id="password" size=30>
             <button class="copybtn" id="copyButton">
@@ -49,11 +50,16 @@
     <div id="info">
         <p text-align="center" style="border: 1px solid black; padding: 10px;" >
             <span>Le mot de passe contient :</span><br/>
-            <span id="checklen">- au moins 8 caractères</span><br/>
-            <span id="checklower">- des minuscules</span><br/>
-            <span id="checkupper">- des majuscules</span><br/>
-            <span id="checkspecial">- des caractères spéciaux</span><br/>
-            <span id="checknumber">- des chiffres</span><br/>
+            <img id="checklenimg" src="../../assets/crossimg.jpg" border="0" data-changeimage="../../assets/tickimg.png" width="10px" height="10px"/>
+            <span id="checklen">8 caractères</span><br/>
+            <img id="checklowerimg" src="../../assets/crossimg.jpg" border="0" data-changeimage="../../assets/tickimg.png" width="10px" height="10px"/>
+            <span id="checklower">minuscule</span><br/>
+            <img id="checkupperimg" src="../../assets/crossimg.jpg" border="0" data-changeimage="../../assets/tickimg.png" width="10px" height="10px"/>
+            <span id="checkupper">majuscule</span><br/>
+            <img id="checkspecialimg" src="../../assets/crossimg.jpg" border="0" data-changeimage="../../assets/tickimg.png" width="10px" height="10px"/>
+            <span id="checkspecial">caractère spécial</span><br/>
+            <img id="checknumberimg" src="../../assets/crossimg.jpg" border="0" data-changeimage="../../assets/tickimg.png" width="10px" height="10px"/>
+            <span id="checknumber">chiffre</span><br/>
         </p>
     </div>
     <script type="module" src="taskpane.js"></script>

@@ -35,20 +35,20 @@ function createPW(passphrase) {
       password = password + list[Math.floor(Math.random() * list.length)];
   }
   else if (passphrase[i] == 't') {
-    list = "ttttt77T";
-    password = password + list[Math.floor(Math.random() * list.length)];
+      list = "ttttt77T";
+      password = password + list[Math.floor(Math.random() * list.length)];
   }
   else if (passphrase[i] == 'q') {
-    list = "qqqqq99Q";
-    password = password + list[Math.floor(Math.random() * list.length)];
+      list = "qqqqq99Q";
+      password = password + list[Math.floor(Math.random() * list.length)];
   }
   else if (passphrase[i] == 'b') {
-    list = "bbbbb66B";
-    password = password + list[Math.floor(Math.random() * list.length)];
+      list = "bbbbb66B";
+      password = password + list[Math.floor(Math.random() * list.length)];
   }
   else if (passphrase[i] == 'z') {
-    list = "zzzz22Z";
-    password = password + list[Math.floor(Math.random() * list.length)];
+      list = "zzzz22Z";
+      password = password + list[Math.floor(Math.random() * list.length)];
   }
   else {
       let n = Math.floor(Math.random() * 8);
@@ -58,7 +58,6 @@ function createPW(passphrase) {
       else {
       password = password + passphrase[i];
       }
-      
   }
   }
   return password;
