@@ -19,7 +19,7 @@ async function getPassword(n) {
         passphrase = passphrase + word1 + " " + word2;
     }
     else if (14 <= n && n <= 23) {
-        a = Math.floor(Math.random() * (n-8))+2;
+        a = Math.floor(Math.random() * (n-10))+3;
         b = Math.floor(Math.random() * (n-a-6))+2;
         c = n-a-b-2;
         request1 = request + a;
@@ -31,9 +31,9 @@ async function getPassword(n) {
         passphrase = passphrase  + word1 + " " + word2 + " " + word3;
     }
     else if (24 <= n && n <= 32){
-        a = Math.floor(Math.random() * (n-18))+2;
-        b = Math.floor(Math.random() * (n-a-13))+2;
-        c = Math.floor(Math.random() * (n-a-b-7))+2;
+        a = Math.floor(Math.random() * (n-21))+5;
+        b = Math.floor(Math.random() * (n-a-15))+4;
+        c = Math.floor(Math.random() * (n-a-b-11))+4;
         d = n-a-b-c-3
         request1 = request + a;
         word1 = await getWord(request1);
