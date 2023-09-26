@@ -112,9 +112,10 @@ function getPasswordfromUser() {
 function conformPW(passphrase) {
     let char = 0, len = 0;
     let password = "";
+    let ans = [];
     while (char < 3 || len != 1) {
         password = createPW(passphrase);
-        let ans = checkpassword(password);
+        ans = checkpassword(password);
         len = ans[0];
         char = ans[5];
     }
