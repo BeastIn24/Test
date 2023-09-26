@@ -114,7 +114,7 @@ function conformPW(passphrase) {
     let password = "";
     while (char < 3 || len != 1) {
         password = createPW(passphrase);
-        ans = checkpassword(password);
+        let ans = checkpassword(password);
         len = ans[0];
         char = ans[5];
     }
