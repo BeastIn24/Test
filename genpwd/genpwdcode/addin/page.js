@@ -137,14 +137,14 @@ function updatepassword(i) {
         document.getElementById("password2").value = "";
         password = document.getElementById("password").value;
         let r = checkpassword(password);
-        updateBoard(r[1]);
+        updateBoard(r);
     }
     else {
         document.getElementById("password").value = "";
         document.getElementById("usedwords").value = "";
         password = document.getElementById("password2").value;
         let r = checkpassword(password);
-        updateBoard(r[1]);
+        updateBoard(r);
     }
 }
 
