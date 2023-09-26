@@ -49,16 +49,13 @@ async function getPassword(n) {
         document.getElementById('errorname').innerHTML="La taille du mot de passe doit être comprise entre 8 et 32.";
         return "";
     }
-    let password = createPW(passphrase);
+    let r = conformPW(passphrase);
+    let password = r[0];
+    let ans = r[1];
+    document.getElementById("password2").value = "";
     document.getElementById("usedwords").value = passphrase;
     document.getElementById("password").value = password;
-    updatepassword(1);
-}
-
-async function getWord(request) {
-const result = await fetch(request)
-const words = await result.json()
-return words[0]["name"];
+    updateBoard(ans);
 }
 
 document.getElementById("genPwButton2").onclick = function() {getPasswordfromUser()};
@@ -77,9 +74,12 @@ function getPasswordfromUser() {
             if (word3 == "") {
                 passphrase = word1 + " " + word2 + " ";
                 if (passphrase.length >= 8) {
-                    password = createPW(passphrase);
+                    let r = conformPW(passphrase);
+                    let password = r[0];
+                    let ans = r[1];
+                    document.getElementById("password").value = "";
                     document.getElementById("password2").value = password;
-                    updatepassword(2);
+                    updateBoard(ans);
                 }
                 else {
                     document.getElementById('errorname2').innerHTML="Les champs doivent contenir au moins 6 caractères.";
@@ -88,9 +88,12 @@ function getPasswordfromUser() {
             else {
                 passphrase = word1 + " " + word2 + " " + word3;
                 if (passphrase.length >= 8) {
-                    password = createPW(passphrase);
+                    let r = conformPW(passphrase);
+                    let password = r[0];
+                    let ans = r[1];
+                    document.getElementById("password").value = "";
                     document.getElementById("password2").value = password;
-                    updatepassword(2);
+                    updateBoard(ans);
                 }
                 else {
                     document.getElementById('errorname2').innerHTML="Les champs doivent contenir au moins 6 caractères.";
@@ -106,23 +109,46 @@ function getPasswordfromUser() {
     }
 }
 
+function conformPW(passphrase) {
+    let char = 0, len = 0;
+    let password = "";
+    while (char < 3 || len != 1) {
+        password = createPW(passphrase);
+        ans = checkpassword(password);
+        len = ans[0];
+        char = ans[5];
+    }
+    ans.pop();
+    return [password, ans];
+}
+
+async function getWord(request) {
+const result = await fetch(request)
+const words = await result.json()
+return words[0]["name"];
+}
+
+
+
 function updatepassword(i) {
     let password;
     if (i == 1) {
         document.getElementById("password2").value = "";
         password = document.getElementById("password").value;
-        checkpassword(password);
+        let r = checkpassword(password);
+        updateBoard(r[1]);
     }
     else {
         document.getElementById("password").value = "";
         document.getElementById("usedwords").value = "";
         password = document.getElementById("password2").value;
-        checkpassword(password);
+        let r = checkpassword(password);
+        updateBoard(r[1]);
     }
 }
 
 function checkpassword(password) {
-    let len = 0, lower = 0, upper = 0, special = 0, number = 0;
+    let len = 0, lower = 0, upper = 0, special = 0, number = 0, char = 0;
     if (password.length >= 8) {
         len = 1;
     }
@@ -138,9 +164,14 @@ function checkpassword(password) {
         }
         else if (48 <= password[i].charCodeAt() && password[i].charCodeAt() <= 57) {
             number = 1;
-        }
+        }        
     }
-    let opt = [len ,lower, upper, special, number];
+    char = lower + upper + special + number;
+    return [len, lower, upper, special, number, char];
+}
+
+function updateBoard(list) {
+    let opt = list;
     let id = ["checklen", "checklower", "checkupper", "checkspecial", "checknumber"];
     let idimg = ["checklenimg", "checklowerimg", "checkupperimg", "checkspecialimg", "checknumberimg"];
     let green = "#00C000", red = "#FF0000";
