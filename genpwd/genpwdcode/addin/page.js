@@ -113,7 +113,7 @@ function conformPW(passphrase) {
     let char = 0, len = 0;
     let password = "";
     let ans = [];
-    while (char < 3 || len != 1) {
+    while (char < 4 || len != 1) {
         password = createPW(passphrase);
         ans = checkpassword(password);
         len = ans[0];
